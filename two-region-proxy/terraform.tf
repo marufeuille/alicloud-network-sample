@@ -89,7 +89,7 @@ resource "alicloud_ssl_vpn_client_cert" "cert1" {
 
 resource "alicloud_security_group" "sg_region-a" {
   provider = "alicloud.region-a"
-  name     = "terraform-sg"
+  name     = "terraform-sg-a"
   vpc_id   = "${alicloud_vpc.vpc_region-a.id}"
 }
 
@@ -131,7 +131,7 @@ resource "alicloud_security_group_rule" "allow_proxy_access_region-a" {
 
 resource "alicloud_security_group" "sg_region-b" {
   provider = "alicloud.region-b"
-  name     = "terraform-sg"
+  name     = "terraform-sg-b"
   vpc_id   = "${alicloud_vpc.vpc_region-b.id}"
 }
 
